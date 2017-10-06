@@ -1,0 +1,9 @@
+<div>
+	<h2><%= todo.title %></h2>
+	<p><%= todo.body %></p>
+
+	<%= link_to "Show", todo if action_name == "index" %> 
+	<%= link_to "Edit", edit_todo_path(todo) %>
+	<%= link_to "Destroy", @todo, method: :delete, data: { confirm: "Are you sure?" } if action_name == "show" %>
+	<%= link_to "Back", root_path unless action_name == "index" %>
+</div>
